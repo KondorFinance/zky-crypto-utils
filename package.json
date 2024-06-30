@@ -1,0 +1,41 @@
+{
+  "name": "@kondorFinance/zky-crypto-utils",
+  "version": "0.0.1",
+  "description": "Crypto utils for managing bitcoin embedded wallets",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "cryptography",
+    "bitcoin",
+    "signature",
+    "bip322"
+  ],
+  "author": "Kondor Finance, Ltd.",
+  "license": "Apache-2.0",
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ]
+  },
+  "dependencies": {
+    "@ethersproject/keccak256": "^5.7.0",
+    "@scure/bip39": "^1.3.0",
+    "assert": "^2.1.0",
+    "buffer": "^6.0.3",
+    "keccak256": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "ts-jest": "^29.1.5",
+    "typescript": "^5.5.2"
+  }
+}
