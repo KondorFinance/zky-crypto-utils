@@ -60,13 +60,12 @@ function getETHSeedMnemonics(entropy: string) {
  * @returns {string} The processed key seed as a hex string.
  */
 function getKeySeedFromBIP322Signature(BIP322Signature: string) {
-  const BIP322SignatureBuffer = Buffer.from(BIP322Signature, "base64")
-  const BIP322HashedSignature = keccak256(BIP322SignatureBuffer)
-  const keySeed = BIP322HashedSignature.substring(0, 64);
-  let keySeedBigInt = BigInt(keySeed) >> BigInt(5);
+  const BIP322SignatureBuffer = Buffer.from(BIP322Signature, "base64");
+  const BIP322HashedSignature = keccak256(BIP322SignatureBuffer);
+  let keySeedBigInt = BigInt(BIP322HashedSignature);
   keySeedBigInt %= MAX_RANGE;
-  const keySeedHex = keySeedBigInt.toString(16).padStart(64, '0');
   assert(verifyValidKeySeed(keySeedBigInt), "Invalid key seed as it is out of range");
+  const keySeedHex = keySeedBigInt.toString(16);
   const seedBytes = Buffer.from(keySeedHex, 'hex');
   assert(seedBytes.length === 32, "Invalid key seed length, key seed must be 256 bits.")
   return keySeedHex;
