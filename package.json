@@ -26,6 +26,10 @@
   ],
   "author": "Kondor Finance, Ltd.",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KondorFinance/zky-crypto-utils.git"
+  },
   "jest": {
     "testEnvironment": "node",
     "transform": {
