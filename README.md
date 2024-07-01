@@ -4,7 +4,7 @@ Crypto utilities for managing bitcoin embedded wallets.
 
 ## Usage
 
-> npm install @KondorFinance/zky-crypto-utils
+> npm install @kondor-finance/zky-crypto-utils
 
 ```js
 import { getKeySeedFromBIP322Signature, getETHSeedMnemonics } from '@KondorFinance/zky-crypto-utils';

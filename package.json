@@ -30,6 +30,12 @@
     "type": "git",
     "url": "git+https://github.com/KondorFinance/zky-crypto-utils.git"
   },
+  "contributors": [
+    {
+      "name": "decentraluis",
+      "email": "luis@kondor.finance"
+    }
+  ],
   "jest": {
     "testEnvironment": "node",
     "transform": {
