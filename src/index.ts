@@ -16,7 +16,7 @@
 
 import { Buffer } from "buffer"
 import { keccak256 } from "@ethersproject/keccak256"
-import * as assert from "assert"
+import assert from "assert";
 import * as bip39 from '@scure/bip39';
 import { wordlist } from '@scure/bip39/wordlists/english';
 
@@ -29,7 +29,7 @@ const MAX_RANGE = BigInt("0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD2
  * @param keySeed The key seed to verify.
  * @returns {boolean} True if the key seed is within the valid range, false otherwise.
  */
-const verifyValidKeySeed = (keySeed) => {
+const verifyValidKeySeed = (keySeed: bigint) => {
   return keySeed >= MIN_RANGE && keySeed <= MAX_RANGE;
 }
 

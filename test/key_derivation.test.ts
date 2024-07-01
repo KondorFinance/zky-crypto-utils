@@ -1,7 +1,7 @@
 // key_derivation.test.ts
 import * as bip39 from '@scure/bip39';
 import { wordlist } from '@scure/bip39/wordlists/english';
-import { getKeySeedFromBIP322Signature, getETHSeedMnemonics } from '../index';
+import { getKeySeedFromBIP322Signature, getETHSeedMnemonics } from '../src/index';
 
 describe('getKeySeedFromBIP322Signature', () => {
   it('should derive a key seed with valid mnemonics', () => {
